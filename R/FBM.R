@@ -269,7 +269,7 @@ FBM_RC <- methods::setRefClass(
     },
     check_dimensions = function() {
       if (file.size(.self$backingfile) != .self$file_size)
-        stop2("Inconsistency between size of backingfile and dimensions.")
+        warning2("Inconsistency between size of backingfile and dimensions.") #ES edit from stop2 to warning2 to avoid halting execution
     }
   )
 )
